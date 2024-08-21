@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    
   },
   age :{
     type : Number
@@ -18,4 +19,6 @@ const userSchema = new mongoose.Schema({
 
 //create model
 const User =  mongoose.model("User",userSchema);
+
+//exports
 module.exports = User ;
