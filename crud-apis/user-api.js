@@ -6,12 +6,14 @@ const registerUser = async (req,res)=>{
 const {name,email,age} = req.body;
 
 try {
-    if(age<18){  //checking for not eligible person
+    //checking for not eligible person
+    if(age<18){  
         return res.status(406).json({
             message :"you are not eligible"
         })
     }
-    const user = await User.findOne({email}); //checking for duplicate email
+    //checking for duplicate email
+    const user = await User.findOne({email});
     if(user){
         return res.status(409).json({
             message :"email is already registered"
