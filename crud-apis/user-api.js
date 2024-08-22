@@ -1,17 +1,17 @@
 //imports
 const User = require("../models/userModel");
 
-//api functions
+//register user api
 const registerUser = async (req,res)=>{
 const {name,email,age} = req.body;
 
 try {
-    if(age<18){
+    if(age<18){  //checking for not eligible person
         return res.status(406).json({
             message :"you are not eligible"
         })
     }
-    const user = await User.findOne({email});
+    const user = await User.findOne({email}); //checking for duplicate email
     if(user){
         return res.status(409).json({
             message :"email is already registered"
