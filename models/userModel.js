@@ -1,21 +1,23 @@
-// Imports
-const mongoose = require("mongoose");
+// Import
+const mongoose = require('mongoose');
 
-//create schema
+// Defined Schema
 const userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  email: {
-    type: String,
-    required: true,
-    
-  },
-  age :{
-    type : Number
-  }
-});
+    name : {
+        type:String,
+        required:true
+    },
+    email : {
+        type:String,
+        required:true
+    },
+    age : {
+        type : Number
+    }
+},{
+    timestamps:true
+})
+
 
 //create model
 const User =  mongoose.model("User",userSchema);
