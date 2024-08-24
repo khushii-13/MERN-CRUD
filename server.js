@@ -24,10 +24,6 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log(error);
 })
 
-//creating api
 
-app.get("/",(req,res)=>{
- res.send("<h1>HIII</h1>");
-})
 
 
