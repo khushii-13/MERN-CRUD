@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
     app.listen(PORT,()=>{
         console.log(`server is running at http://localhost:${PORT}`)
     });
-}).catch((error)=>{
+}).catch((error )=>{
     console.log(error);
 })
 
