@@ -50,6 +50,12 @@ const ViewUser = () => {
           <p className="mb-1">
           Created At : {formatDate(user.createdAt)}
           </p>
+          <div className="d-flex m-2">
+          <button className="btn btn-primary ">Edit</button>
+          <button className="btn btn-danger ms-4">Delete</button>
+          </div>
+
+
         </div>
       </div>
     ))}
