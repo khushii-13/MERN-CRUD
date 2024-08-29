@@ -21,11 +21,11 @@ export const Forms = () => {
         },
         body: JSON.stringify(formData),
       });
-      if (response.ok) {
-        const data = await response.json();
+      const data = await response.json();
+      if (response.ok) { 
         console.log("User registered:", data);
       } else {
-        console.error("Failed to register user");
+        console.log(data.message);
       }
       setFormData({
         name: "",
@@ -33,7 +33,7 @@ export const Forms = () => {
         age: "",
       });
     } catch (error) {
-      console.error("Error:", error);
+      console.log(error);
     }
   };
 
