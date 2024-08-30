@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { format, parseISO } from "date-fns";
+import { Link } from "react-router-dom";
 
 const ViewUser = () => {
   const [userDataContainer, setUserDataContainer] = useState([]);
@@ -74,7 +75,9 @@ const ViewUser = () => {
             <p className="mb-1">Age : {user.age}</p>
             <p className="mb-1">Created At : {formatDate(user.createdAt)}</p>
             <div className="d-flex m-2">
-              <button className="btn btn-primary ">Edit</button>
+              <Link to={`/create-user/${user._id}`}>
+                <button className="btn btn-primary">Edit</button>
+              </Link>
               <button
                 className="btn btn-danger ms-4"
                 user-id={user._id}

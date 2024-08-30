@@ -12,7 +12,8 @@ function App() {
     <Navbar></Navbar>
     <Routes>
       <Route path='/' element = {<ViewUser/>}/>
-      <Route path ='/create-user' element ={<Forms/>}/>
+      <Route path='/create-user' element={<Forms/> } />
+      <Route path ='/create-user/:id' element ={<Forms/>}/>
     </Routes>
 
     </BrowserRouter>
