@@ -4,14 +4,16 @@ const mongoose  = require("mongoose");
 const dotenv = require("dotenv");
 const User = require("./models/userModel");
 const cors = require('cors');
-const router = require("./routes");
+const userRouter = require("./userRoutes");
+const utilRouter = require ("./utilRoutes");
 
 // Important Calls
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.use("/api/v1",router);
+app.use("/api/v1",userRouter);
+app.use("/api/v2",utilRouter);
 
 
 // Declarations

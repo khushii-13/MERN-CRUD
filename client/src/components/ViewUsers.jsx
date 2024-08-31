@@ -68,13 +68,13 @@ const ViewUser = () => {
   return (
     <>
       {userDataContainer.map((user, index) => (
-        <div key={index} className="card m-auto w-75 p-2 mt-5">
-          <div className="card-body">
-            <h5 className="card-title">Name : {user.name}</h5>
-            <p className="mb-1">Email : {user.email}</p>
-            <p className="mb-1">Age : {user.age}</p>
-            <p className="mb-1">Created At : {formatDate(user.createdAt)}</p>
-            <div className="d-flex m-2">
+        <div key={index} className="card m-auto w-75 p-2 mt-5 user-card bs1">
+          <div className="card-body user-card">
+            <h5 className="card-title user-card">Name : {user.name}</h5>
+            <p className="mb-1 user-card">Email : {user.email}</p>
+            <p className="mb-1 user-card">Age : {user.age}</p>
+            <p className="mb-1 user-card">Created At : {formatDate(user.createdAt)}</p>
+            <div className="d-flex m-2 user-card">
               <Link to={`/create-user/${user._id}`}>
                 <button className="btn btn-primary">Edit</button>
               </Link>
